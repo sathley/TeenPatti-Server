@@ -4,14 +4,45 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using TeenPatti.DataContracts;
 
 namespace TeenPatti.Services
 {
     public class PlayerService : IPlayer
     {
-        public string GetData(int value)
+        public PlayerResult Create(Player player)
         {
-            return string.Format("You entered: {0}", value);
+            throw new NotImplementedException();
+        }
+
+        public PlayerResult Get(string playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PlayerResult Update(Player player, string playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Result Delete(string playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public BooleanResult ValidateSession(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Status InValidateSession(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public StringResult GetSecretQuestion(string playerId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

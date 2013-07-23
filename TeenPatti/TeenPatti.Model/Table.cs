@@ -13,5 +13,7 @@ namespace TeenPatti.Model
         public List<long> PlayerIds { get; set; }
 
         public long BootSize { get; set; }
+
+        public Variation Variation { get; set; }
     }
 }

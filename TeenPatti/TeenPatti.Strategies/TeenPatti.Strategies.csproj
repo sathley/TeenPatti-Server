@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AK47\AK47VariationStrategy.cs" />
     <Compile Include="Classic\ClassicStrategy.cs" />
+    <Compile Include="Classic\ClassicSameKindStrategies.cs" />
     <Compile Include="Classic\ResolveSameKindWinner.cs" />
     <Compile Include="Discard1\Discard1VariationStrategy.cs" />
     <Compile Include="Imagine1\Imagine1VariationStrategy.cs" />

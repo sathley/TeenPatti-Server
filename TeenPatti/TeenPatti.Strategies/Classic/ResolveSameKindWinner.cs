@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TeenPatti.Interfaces;
 using TeenPatti.Model;
+using TeenPatti.Strategies;
 
 namespace TeenPatti.Strategies
 {

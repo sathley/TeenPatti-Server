@@ -39,16 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompareHands.cs" />
-    <Compile Include="Core.cs" />
-    <Compile Include="ICompareSameKindStrategy.cs" />
+    <Compile Include="CompareEngine.cs" />
+    <Compile Include="CompareCore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TeenPatti.Interfaces\TeenPatti.Interfaces.csproj">
+      <Project>{A919B475-288F-4FFD-A7DE-4FEFA13444A4}</Project>
+      <Name>TeenPatti.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TeenPatti.Model\TeenPatti.Model.csproj">
       <Project>{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}</Project>
       <Name>TeenPatti.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeenPatti.Strategies\TeenPatti.Strategies.csproj">
+      <Project>{06F611C8-7808-447F-9270-69BCAC3DFAB2}</Project>
+      <Name>TeenPatti.Strategies</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

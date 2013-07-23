@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A919B475-288F-4FFD-A7DE-4FEFA13444A4}</ProjectGuid>
+    <ProjectGuid>{06F611C8-7808-447F-9270-69BCAC3DFAB2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeenPatti.Interfaces</RootNamespace>
-    <AssemblyName>TeenPatti.Interfaces</AssemblyName>
+    <RootNamespace>TeenPatti.Strategies</RootNamespace>
+    <AssemblyName>TeenPatti.Strategies</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,13 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICompareSameKindStrategy.cs" />
-    <Compile Include="IVariationStrategy.cs" />
+    <Compile Include="AK47\AK47VariationStrategy.cs" />
+    <Compile Include="Classic\ClassicStrategy.cs" />
+    <Compile Include="Classic\ResolveSameKindWinner.cs" />
+    <Compile Include="Discard1\Discard1VariationStrategy.cs" />
+    <Compile Include="Imagine1\Imagine1VariationStrategy.cs" />
+    <Compile Include="Mufflis\MufflisVariationStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TeenPatti.Interfaces\TeenPatti.Interfaces.csproj">
+      <Project>{A919B475-288F-4FFD-A7DE-4FEFA13444A4}</Project>
+      <Name>TeenPatti.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TeenPatti.Model\TeenPatti.Model.csproj">
-      <Project>{58cefb2b-aeec-458e-9d3b-3610a1fe9eef}</Project>
+      <Project>{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}</Project>
       <Name>TeenPatti.Model</Name>
     </ProjectReference>
   </ItemGroup>

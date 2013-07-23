@@ -50,6 +50,9 @@ namespace TeenPatti.DataContracts
         public bool IsEnabled { get; set; }
 
         [DataMember]
+        public long Bank { get; set; }
+
+        [DataMember]
         public KeyValue[] Attributes { get; set; }
 
         public Dictionary<string, string> Items { get; set; }

@@ -39,8 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="PlayerTranlator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeenPatti.DataContracts\TeenPatti.DataContracts.csproj">
+      <Project>{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}</Project>
+      <Name>TeenPatti.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeenPatti.Model\TeenPatti.Model.csproj">
+      <Project>{58cefb2b-aeec-458e-9d3b-3610a1fe9eef}</Project>
+      <Name>TeenPatti.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

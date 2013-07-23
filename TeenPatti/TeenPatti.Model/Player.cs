@@ -39,8 +39,27 @@ namespace TeenPatti.Model
 
         public bool IsEnabled { get; set; }
 
-        public Dictionary<string, string> Attributes { get; private set; }
+        public Dictionary<string, string> Attributes { get;  set; }
 
         public long Bank { get; set; }
+
+        public string this[string name]
+        {
+            get
+            {
+                if (this.Attributes == null)
+                    return null;
+                string match = null;
+                if (this.Attributes.TryGetValue(name, out match) == true)
+                    return match;
+                else return null;
+            }
+            set
+            {
+                if (this.Attributes == null)
+                    this.Attributes = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
+                this.Attributes[name] = value;
+            }
+        }
     }
 }

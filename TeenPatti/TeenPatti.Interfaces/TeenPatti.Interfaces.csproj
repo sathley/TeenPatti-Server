@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICompareSameKindClassicStrategy.cs" />
-    <Compile Include="ICompareSameKindStrategy.cs" />
     <Compile Include="IVariationStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

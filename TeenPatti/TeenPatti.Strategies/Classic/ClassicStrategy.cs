@@ -42,7 +42,8 @@ namespace TeenPatti.Strategies
                 else
                     return HandKind.Sequence;
 
-            //  test with soft ace
+            //  test for sequence with soft ace
+
             foreach (var card in cardClone.Where(card => card.Value.Equals(1)))
             {
                 card.SetValue(14);

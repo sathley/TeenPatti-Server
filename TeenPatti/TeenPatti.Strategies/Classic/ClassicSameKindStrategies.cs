@@ -89,6 +89,11 @@ namespace TeenPatti.Strategies
             int cardsSumA = cardsA.Sum(card => card.Value); 
             int cardsSumB = cardsB.Sum(card => card.Value);
 
+            //  Because A-K-Q > A-2-3 > K-Q-J
+            //  A+2+3 = 19 (can only be beaten by A-K-Q (sum=39))
+            if(cardsSumA == 19 && cardsSumB != 39)  return CompareResult.AWon;
+            if (cardsSumB == 19 && cardsSumA != 39) return CompareResult.BWon;
+
             if (cardsSumA>cardsSumB)    return CompareResult.AWon;
             if (cardsSumB>cardsSumA)    return CompareResult.BWon;
             
@@ -105,6 +110,11 @@ namespace TeenPatti.Strategies
 
             int cardsSumA = cardsA.Sum(card => card.Value);
             int cardsSumB = cardsB.Sum(card => card.Value);
+
+            //  Because A-K-Q > A-2-3 > K-Q-J
+            //  A+2+3 = 19 (can only be beaten by A-K-Q (sum=39))
+            if (cardsSumA == 19 && cardsSumB != 39) return CompareResult.AWon;
+            if (cardsSumB == 19 && cardsSumA != 39) return CompareResult.BWon;
 
             if (cardsSumA > cardsSumB) return CompareResult.AWon;
             if (cardsSumB > cardsSumA) return CompareResult.BWon;

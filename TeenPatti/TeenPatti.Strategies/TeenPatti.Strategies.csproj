@@ -47,6 +47,7 @@
     <Compile Include="Imagine1\Imagine1VariationStrategy.cs" />
     <Compile Include="Mufflis\MufflisVariationStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeenPatti.Interfaces\TeenPatti.Interfaces.csproj">

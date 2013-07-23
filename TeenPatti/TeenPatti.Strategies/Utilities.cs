@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TeenPatti.Model;
 
-namespace TeenPatti.Engine
+namespace TeenPatti.Strategies
 {
     public static class Utilities
     {
-        public static List<Card> MakeAcesValueFourteen(List<Card> cards)
+        public static List<Card> MakeAcesValuesFourteen(List<Card> cards)
         {
             var returnCards = new List<Card>();
             foreach (var card in cards)

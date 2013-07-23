@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace TeenPatti.Model
 {
-    public class Table
+    public enum HandKind
     {
-        public long Id { get; set; }
-
-        public List<long> PlayerIds { get; set; }
-
-        public long BootSize { get; set; }
+        HighCard = 0,
+        Pair = 1,
+        Colour = 2,
+        Sequence = 3,
+        PureSequence = 4,
+        Trail = 5
     }
 }

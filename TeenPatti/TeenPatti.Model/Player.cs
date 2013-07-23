@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace TeenPatti.Model
 {
-    public class Table
+    public class Player
     {
         public long Id { get; set; }
 
-        public List<long> PlayerIds { get; set; }
+        public string FirstName { get; set; }
 
-        public long BootSize { get; set; }
+        public string LastName { get; set; }
+
+        public string UserName { get; set; }
+
+        public long Bank { get; set; }
     }
 }

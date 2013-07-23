@@ -39,8 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CompareHands.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="ICompareSameKindStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeenPatti.Model\TeenPatti.Model.csproj">
+      <Project>{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}</Project>
+      <Name>TeenPatti.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,13 +14,13 @@ namespace TeenPatti.Model
             {
                 for (var j = 0; j < 13; j++)
                 {
-                    _cards[(j) + (13*i)] = new Card(j+1, (Suite)i);
+                    _cards[(j) + (13*i)] = new Card(j+1, (Suit)i);
                 }
             }
             Shuffle(ref _cards);
         }
 
-        private void Shuffle(ref Card[] cards)
+        private static void Shuffle(ref Card[] cards)
         {
             var rand = new Random();
             for (int i = cards.Length - 1; i > 0; i--)

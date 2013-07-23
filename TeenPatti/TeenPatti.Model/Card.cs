@@ -1,21 +1,22 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace TeenPatti.Model
 {
     public class Card
     {
-        public Card(int value, Suite suite)
+        public Card(int value, Suit suite)
         {
             this.Suite = suite;
             this.Value = value;
         }
 
-        public Suite Suite { get; private set; }
+        public Suit Suite { get; private set; }
 
         public int Value { get; private set; }
 
-        public void SetSuite(Suite suite)
+        public void SetSuite(Suit suite)
         {
             this.Suite = suite;
         }
@@ -74,5 +75,23 @@ namespace TeenPatti.Model
             }
             return string.Format("{0} of {1}", val, Suite);
         }
+    }
+
+    public abstract class Hand
+    {
+        public List<Card> Cards { get; set; }
+
+        protected Hand()
+        {
+            Cards=new List<Card>();
+        }
+    }
+
+    /// <summary>
+    /// A classic hand always has exactly 3 cards
+    /// </summary>
+    public class ClassicHand:Hand
+    {
+        
     }
 }

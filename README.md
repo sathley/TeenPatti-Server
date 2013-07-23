@@ -1,4 +1,4 @@
 TeenPatti
 =========
 
-Teen Patti game with a variation engine baked in.
+Teen Patti multi-player game, with a variation engine baked in.

@@ -40,10 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthenticateRequest.cs" />
-    <Compile Include="AuthenticationResult.cs" />
-    <Compile Include="BooleanResult.cs" />
-    <Compile Include="StringResult.cs" />
+    <Compile Include="Results\AuthenticateRequest.cs" />
+    <Compile Include="Results\AuthenticationResult.cs" />
+    <Compile Include="Results\BooleanResult.cs" />
+    <Compile Include="Results\StringResult.cs" />
     <Compile Include="CredentialImpls.cs" />
     <Compile Include="Credentials.cs" />
     <Compile Include="Results\PlayerResult.cs" />

@@ -44,5 +44,10 @@ namespace TeenPatti.Services
         {
             throw new NotImplementedException();
         }
+
+        public AuthenticationResult Authenticate(AuthenticateRequest request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

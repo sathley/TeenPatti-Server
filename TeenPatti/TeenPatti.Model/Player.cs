@@ -61,5 +61,45 @@ namespace TeenPatti.Model
                 this.Attributes[name] = value;
             }
         }
+
+        public static Player Create(Player player)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Player Get(long playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Player Update(Player player, long playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void Delete(long playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ValidateSession(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InValidateSession(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetSecretQuestion(string playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Authenticate(Credentials request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

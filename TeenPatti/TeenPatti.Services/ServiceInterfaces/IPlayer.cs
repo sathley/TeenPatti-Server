@@ -39,6 +39,11 @@ namespace TeenPatti.Services
         [OperationContract]
         [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json, UriTemplate = "{playerId}/secretquestion")]
         StringResult GetSecretQuestion(string playerId);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "/authenticate")]
+        AuthenticationResult Authenticate(AuthenticateRequest request);
     }
 
     

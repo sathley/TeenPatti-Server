@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Redis", "TeenPatt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Manager", "TeenPatti.Manager\TeenPatti.Manager.csproj", "{03590B8C-1E99-4742-BCFD-75CDB33DE45D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,12 +83,16 @@ Global
 		{C0B7217D-9391-451E-B52D-49D76581E1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0B7217D-9391-451E-B52D-49D76581E1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0B7217D-9391-451E-B52D-49D76581E1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{031A9444-A70E-45AE-AA89-D78CCE116197} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
 		{C0B7217D-9391-451E-B52D-49D76581E1EA} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
+		{031A9444-A70E-45AE-AA89-D78CCE116197} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
 	EndGlobalSection
 EndGlobal

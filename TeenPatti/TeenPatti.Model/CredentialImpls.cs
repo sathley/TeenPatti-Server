@@ -1,35 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeenPatti.DataContracts
+namespace TeenPatti.Model
 {
-    [DataContract]
     public class SecretAnswerCredentials : Credentials
     {
-        [DataMember]
+        
         public string Username { get; set; }
 
-        [DataMember]
+        
         public string SecretAnswer { get; set; }
 
+        public override string Authenticate()
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    [DataContract]
+    
     public class UsernamePasswordCredentials : Credentials
     {
-        [DataMember]
+        
         public string Username { get; set; }
 
-        [DataMember]
+        
         public string Password { get; set; }
+
+        public override string Authenticate()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 
-    [DataContract]
+    
     public class FacebookCredentials : Credentials
     {
         public FacebookCredentials()
@@ -38,10 +45,10 @@ namespace TeenPatti.DataContracts
         }
 
 
-        [DataMember]
+        
         public string AccessToken { get; set; }
 
-        [DataMember]
+        
         public Dictionary<string, string> Attributes { get; private set; }
 
         public string this[string attrName]
@@ -55,9 +62,14 @@ namespace TeenPatti.DataContracts
             }
             set { this.Attributes[attrName] = value; }
         }
+
+        public override string Authenticate()
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    [DataContract]
+    
     public class TwitterCredentials : Credentials
     {
         public TwitterCredentials()
@@ -65,13 +77,13 @@ namespace TeenPatti.DataContracts
             this.Attributes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         }
 
-        [DataMember]
+        
         public string OAuthToken { get; set; }
 
-        [DataMember]
+        
         public string OAuthTokenSecret { get; set; }
 
-        [DataMember]
+        
         public Dictionary<string, string> Attributes { get; private set; }
 
         public string this[string attrName]
@@ -85,13 +97,51 @@ namespace TeenPatti.DataContracts
             }
             set { this.Attributes[attrName] = value; }
         }
+
+        public override string Authenticate()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class TokenCredentials : Credentials
     {
-        [DataMember]
+        
         public string Token { get; set; }
+
+        public override string Authenticate()
+        {
+            throw new NotImplementedException();
+        }
     }
 
+    public class OAuthCredentials : Credentials
+    {
+        public OAuthCredentials()
+        {
+            this.Attributes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        }
 
+        public string Type { get; set; }
+
+        public Dictionary<string, string> Attributes { get; private set; }
+
+        public string this[string attrName]
+        {
+            get
+            {
+                string value = null;
+                if (this.Attributes.TryGetValue(attrName, out value) == true)
+                    return value;
+                else return null;
+            }
+            set { this.Attributes[attrName] = value; }
+        }
+
+
+        public override string Authenticate()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

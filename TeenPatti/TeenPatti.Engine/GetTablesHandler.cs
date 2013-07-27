@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TeenPatti.Interfaces;
+﻿using TeenPatti.Interfaces;
 
-namespace TeenPatti.Infrastructure
+namespace TeenPatti.Engine
 {
     class GetTablesHandler: IMessageHandler 
     {

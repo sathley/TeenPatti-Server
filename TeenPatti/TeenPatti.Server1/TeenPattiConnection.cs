@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR;
 using Newtonsoft.Json;
+using TeenPatti.Engine;
 using TeenPatti.Infrastructure;
 using TeenPatti.Interfaces;
 
@@ -49,7 +50,7 @@ namespace TeenPatti.Server
             IMessageHandler handler = MessageHandlerManager.GetHandler(message.Type??"");
             var playerId = _sessionDatabase.Authenticate(message.SessionToken??"");
 
-            if(handler!=null && playerId!=0)
+            if(handler != null && playerId != 0)
                 handler.HandleMessage(message.Body, playerId);
             
             return base.OnReceived(request, connectionId, data);

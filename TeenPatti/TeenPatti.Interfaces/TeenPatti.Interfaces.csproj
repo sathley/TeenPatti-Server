@@ -42,7 +42,9 @@
     <Compile Include="ICompareSameKindClassicStrategy.cs" />
     <Compile Include="IDatabase.cs" />
     <Compile Include="IMessageHandler.cs" />
+    <Compile Include="IMessageSendingManager.cs" />
     <Compile Include="ISessionDatabase.cs" />
+    <Compile Include="ITableManager.cs" />
     <Compile Include="IVariationStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

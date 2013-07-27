@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompareEngine.cs" />
+    <Compile Include="GetTablesHandler.cs" />
+    <Compile Include="MessageHandlerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

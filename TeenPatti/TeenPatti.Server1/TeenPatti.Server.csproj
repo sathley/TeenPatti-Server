@@ -106,6 +106,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TeenPatti.Engine\TeenPatti.Engine.csproj">
+      <Project>{2C4E5423-7C0E-437E-AC39-153C016A570F}</Project>
+      <Name>TeenPatti.Engine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TeenPatti.Infrastructure\TeenPatti.Infrastructure.csproj">
       <Project>{563D6DEC-1FF5-40F8-AAB6-65699BAE1136}</Project>
       <Name>TeenPatti.Infrastructure</Name>

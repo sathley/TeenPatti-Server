@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TeenPatti.Interfaces;
 
-namespace TeenPatti.Infrastructure
+namespace TeenPatti.Engine
 {
     public static class MessageHandlerManager
     {

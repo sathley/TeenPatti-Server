@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMessageSendingManager.cs" />
     <Compile Include="MessageSendingManager.cs" />
     <Compile Include="SessionManager.cs" />
+    <Compile Include="TableManager.cs" />
     <Compile Include="WebSocketManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,6 +56,10 @@
     <ProjectReference Include="..\TeenPatti.Interfaces\TeenPatti.Interfaces.csproj">
       <Project>{A919B475-288F-4FFD-A7DE-4FEFA13444A4}</Project>
       <Name>TeenPatti.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeenPatti.Model\TeenPatti.Model.csproj">
+      <Project>{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}</Project>
+      <Name>TeenPatti.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\TeenPatti.Server1\TeenPatti.Server.csproj">
       <Project>{26222653-6531-4BDB-8033-D4B910276D45}</Project>

@@ -51,6 +51,7 @@
     <Compile Include="Suit.cs" />
     <Compile Include="Table.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="TableManager.cs" />
     <Compile Include="Variation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

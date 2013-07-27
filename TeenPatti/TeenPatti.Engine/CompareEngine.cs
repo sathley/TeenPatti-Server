@@ -7,21 +7,21 @@ namespace TeenPatti.Engine
 {
     public static class CompareEngine
     {
-        public static readonly Dictionary<Variation, IVariationStrategy> Strategies;
+        public static readonly Dictionary<VariationType, IVariationStrategy> Strategies;
 
         static CompareEngine()
         {
-            Strategies=new Dictionary<Variation, IVariationStrategy>
+            Strategies=new Dictionary<VariationType, IVariationStrategy>
                 {
-                    {Variation.Classic, new ClassicStrategy()},
-                    {Variation.AK47, new AK47VariationStrategy()},
-                    {Variation.Discard1, new Discard1VariationStrategy()},
-                    {Variation.Imagine1, new Imagine1VariationStrategy()},
-                    {Variation.Mufflis, new MufflisVariationStrategy()}
+                    {VariationType.Classic, new ClassicStrategy()},
+                    {VariationType.AK47, new AK47VariationStrategy()},
+                    {VariationType.Discard1, new Discard1VariationStrategy()},
+                    {VariationType.Imagine1, new Imagine1VariationStrategy()},
+                    {VariationType.Mufflis, new MufflisVariationStrategy()}
                 };
         }
 
-        public static CompareResult Compare(Variation variation, Hand A, Hand B, Dictionary<string,string> additionalInfo )
+        public static CompareResult Compare(VariationType variation, Hand A, Hand B, Dictionary<string,string> additionalInfo )
         {
             return Strategies[variation].Compare(A, B, additionalInfo);
         }

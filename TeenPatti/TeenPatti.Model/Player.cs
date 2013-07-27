@@ -39,6 +39,8 @@ namespace TeenPatti.Model
 
         public bool IsEnabled { get; set; }
 
+        public string Language { get; set; }
+
         public Dictionary<string, string> Attributes { get;  set; }
 
         public long Bank { get; set; }

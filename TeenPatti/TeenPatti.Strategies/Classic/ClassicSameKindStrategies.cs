@@ -9,8 +9,8 @@ namespace TeenPatti.Strategies
     {
         public CompareResult Compare(Hand handA, Hand handB)
         {
-            var cardsA = Utilities.MakeAcesValuesFourteen(handA.Cards);
-            var cardsB = Utilities.MakeAcesValuesFourteen(handB.Cards);
+            var cardsA = Utilities.MakeAceValuesFourteen(handA.Cards);
+            var cardsB = Utilities.MakeAceValuesFourteen(handB.Cards);
             
             //  Check highest card
             var maxA = Math.Max(Math.Max(cardsA[0].Value, cardsA[1].Value), cardsA[2].Value);
@@ -47,8 +47,8 @@ namespace TeenPatti.Strategies
     {
         public CompareResult Compare(Hand handA, Hand handB)
         {
-            var cardsA = Utilities.MakeAcesValuesFourteen(handA.Cards);
-            var cardsB = Utilities.MakeAcesValuesFourteen(handB.Cards);
+            var cardsA = Utilities.MakeAceValuesFourteen(handA.Cards);
+            var cardsB = Utilities.MakeAceValuesFourteen(handB.Cards);
 
             //  Compare pairs
             int pairValA = cardsA[0].Value == cardsA[1].Value
@@ -70,7 +70,7 @@ namespace TeenPatti.Strategies
                               ? cardsB[2].Value
                               : cardsB[1].Value == cardsB[2].Value ? cardsB[0].Value : cardsB[1].Value;
 
-            if (kickerA>kickerB)     return CompareResult.AWon;
+            if (kickerA>kickerB)    return CompareResult.AWon;
             if (kickerB>kickerA)    return CompareResult.BWon;
 
             //  If pairs and kickers are same
@@ -83,8 +83,8 @@ namespace TeenPatti.Strategies
     {
         public CompareResult Compare(Hand handA, Hand handB)
         {
-            var cardsA = Utilities.MakeAcesValuesFourteen(handA.Cards);
-            var cardsB = Utilities.MakeAcesValuesFourteen(handB.Cards);
+            var cardsA = Utilities.MakeAceValuesFourteen(handA.Cards);
+            var cardsB = Utilities.MakeAceValuesFourteen(handB.Cards);
 
             int cardsSumA = cardsA.Sum(card => card.Value); 
             int cardsSumB = cardsB.Sum(card => card.Value);
@@ -105,8 +105,8 @@ namespace TeenPatti.Strategies
     {
         public CompareResult Compare(Hand handA, Hand handB)
         {
-            var cardsA = Utilities.MakeAcesValuesFourteen(handA.Cards);
-            var cardsB = Utilities.MakeAcesValuesFourteen(handB.Cards);
+            var cardsA = Utilities.MakeAceValuesFourteen(handA.Cards);
+            var cardsB = Utilities.MakeAceValuesFourteen(handB.Cards);
 
             int cardsSumA = cardsA.Sum(card => card.Value);
             int cardsSumB = cardsB.Sum(card => card.Value);
@@ -127,8 +127,8 @@ namespace TeenPatti.Strategies
     {
         public CompareResult Compare(Hand handA, Hand handB)
         {
-            var cardsA = Utilities.MakeAcesValuesFourteen(handA.Cards);
-            var cardsB = Utilities.MakeAcesValuesFourteen(handB.Cards);
+            var cardsA = Utilities.MakeAceValuesFourteen(handA.Cards);
+            var cardsB = Utilities.MakeAceValuesFourteen(handB.Cards);
 
             //  Check highest card
             var maxA = Math.Max(Math.Max(cardsA[0].Value, cardsA[1].Value), cardsA[2].Value);
@@ -165,8 +165,8 @@ namespace TeenPatti.Strategies
     {
         public CompareResult Compare(Hand handA, Hand handB)
         {
-            var cardsA = Utilities.MakeAcesValuesFourteen(handA.Cards);
-            var cardsB = Utilities.MakeAcesValuesFourteen(handB.Cards);
+            var cardsA = Utilities.MakeAceValuesFourteen(handA.Cards);
+            var cardsB = Utilities.MakeAceValuesFourteen(handB.Cards);
 
             if(cardsA[0].Value>cardsB[0].Value) return CompareResult.AWon;
             if(cardsB[0].Value>cardsA[0].Value) return CompareResult.BWon;

@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Engine", "TeenPat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Tests", "TeenPatti.Tests\TeenPatti.Tests.csproj", "{F7175807-2C1C-493B-926D-1766D5C135A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Server", "TeenPatti.Server\TeenPatti.Server.csproj", "{497FDBAC-8F8E-4A86-A2BB-46D533AA0AC3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.DataContracts", "TeenPatti.DataContracts\TeenPatti.DataContracts.csproj", "{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Translators", "TeenPatti.Translators\TeenPatti.Translators.csproj", "{EC96AE29-817F-4DEC-8096-9360A7BC24B8}"
@@ -29,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Manager", "TeenPatti.Manager\TeenPatti.Manager.csproj", "{03590B8C-1E99-4742-BCFD-75CDB33DE45D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Server", "TeenPatti.Server1\TeenPatti.Server.csproj", "{26222653-6531-4BDB-8033-D4B910276D45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.InMemoryDB", "TeenPatti.InMemoryDB\TeenPatti.InMemoryDB.csproj", "{F985881D-45F5-4460-BB0D-1600CE638B9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +49,6 @@ Global
 		{F7175807-2C1C-493B-926D-1766D5C135A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7175807-2C1C-493B-926D-1766D5C135A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7175807-2C1C-493B-926D-1766D5C135A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{497FDBAC-8F8E-4A86-A2BB-46D533AA0AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{497FDBAC-8F8E-4A86-A2BB-46D533AA0AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{497FDBAC-8F8E-4A86-A2BB-46D533AA0AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{497FDBAC-8F8E-4A86-A2BB-46D533AA0AC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,6 +85,14 @@ Global
 		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26222653-6531-4BDB-8033-D4B910276D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26222653-6531-4BDB-8033-D4B910276D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26222653-6531-4BDB-8033-D4B910276D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26222653-6531-4BDB-8033-D4B910276D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,5 +100,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C0B7217D-9391-451E-B52D-49D76581E1EA} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
 		{031A9444-A70E-45AE-AA89-D78CCE116197} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
+		{F985881D-45F5-4460-BB0D-1600CE638B9C} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
 	EndGlobalSection
 EndGlobal

@@ -5,7 +5,7 @@ namespace TeenPatti.Strategies
 {
     public static class Utilities
     {
-        public static List<Card> MakeAcesValuesFourteen(List<Card> cards)
+        public static List<Card> MakeAceValuesFourteen(List<Card> cards)
         {
             var returnCards = new List<Card>();
             foreach (var card in cards)

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeenPatti.Infrastructure
+namespace TeenPatti.Manager
 {
-    public static class Configuration
+    public class SessionManager
     {
-        
     }
 }

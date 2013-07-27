@@ -10,10 +10,30 @@ namespace TeenPatti.Model
     {
         public long Id { get; set; }
 
-        public List<long> PlayerIds { get; set; }
+        public int Capacity { get; set; }
 
         public long BootSize { get; set; }
 
-        public Variation Variation { get; set; }
+        public VariationType Variation { get; set; }
+
+        public long MinimumBankRequired { get; set; }
+
+        public int MinimumPlayersRequired { get; set; }
+
+        public List<Player> Players { get; set; }
     }
+
+    public static class TableProvider
+    {
+        public static List<Table> Get()
+        {
+            return new List<Table>()
+                {
+
+                };
+        }
+    }
+
+
+    
 }

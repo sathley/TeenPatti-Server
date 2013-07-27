@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TeenPatti.DataContracts
 {
-    [DataContract(Namespace = "http://www.tavisca.com/gossamer/datacontracts/2011/11")]
+    [DataContract]
     public class KeyValue
     {
         [DataMember]

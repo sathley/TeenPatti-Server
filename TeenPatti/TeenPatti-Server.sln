@@ -1,35 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Model", "TeenPatti.Model\TeenPatti.Model.csproj", "{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Engine", "TeenPatti.Engine\TeenPatti.Engine.csproj", "{2C4E5423-7C0E-437E-AC39-153C016A570F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Tests", "TeenPatti.Tests\TeenPatti.Tests.csproj", "{F7175807-2C1C-493B-926D-1766D5C135A0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.DataContracts", "TeenPatti.DataContracts\TeenPatti.DataContracts.csproj", "{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Translators", "TeenPatti.Translators\TeenPatti.Translators.csproj", "{EC96AE29-817F-4DEC-8096-9360A7BC24B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Server", "TeenPatti.Server\TeenPatti.Server.csproj", "{26222653-6531-4BDB-8033-D4B910276D45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.MongoDB", "TeenPatti.MongoDB\TeenPatti.MongoDB.csproj", "{031A9444-A70E-45AE-AA89-D78CCE116197}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Infrastructure", "TeenPatti.Infrastructure\TeenPatti.Infrastructure.csproj", "{563D6DEC-1FF5-40F8-AAB6-65699BAE1136}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Services", "TeenPatti.Services\TeenPatti.Services.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Interfaces", "TeenPatti.Interfaces\TeenPatti.Interfaces.csproj", "{A919B475-288F-4FFD-A7DE-4FEFA13444A4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Strategies", "TeenPatti.Strategies\TeenPatti.Strategies.csproj", "{06F611C8-7808-447F-9270-69BCAC3DFAB2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Redis", "TeenPatti.Redis\TeenPatti.Redis.csproj", "{C0B7217D-9391-451E-B52D-49D76581E1EA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Manager", "TeenPatti.Manager\TeenPatti.Manager.csproj", "{03590B8C-1E99-4742-BCFD-75CDB33DE45D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Server", "TeenPatti.Server1\TeenPatti.Server.csproj", "{26222653-6531-4BDB-8033-D4B910276D45}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.InMemoryDB", "TeenPatti.InMemoryDB\TeenPatti.InMemoryDB.csproj", "{F985881D-45F5-4460-BB0D-1600CE638B9C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{859F7344-74D2-4E5B-A6A2-D705AA43C60F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,69 +18,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58CEFB2B-AEEC-458E-9D3B-3610A1FE9EEF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C4E5423-7C0E-437E-AC39-153C016A570F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C4E5423-7C0E-437E-AC39-153C016A570F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C4E5423-7C0E-437E-AC39-153C016A570F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C4E5423-7C0E-437E-AC39-153C016A570F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7175807-2C1C-493B-926D-1766D5C135A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7175807-2C1C-493B-926D-1766D5C135A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7175807-2C1C-493B-926D-1766D5C135A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7175807-2C1C-493B-926D-1766D5C135A0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC96AE29-817F-4DEC-8096-9360A7BC24B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC96AE29-817F-4DEC-8096-9360A7BC24B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC96AE29-817F-4DEC-8096-9360A7BC24B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC96AE29-817F-4DEC-8096-9360A7BC24B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{031A9444-A70E-45AE-AA89-D78CCE116197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{031A9444-A70E-45AE-AA89-D78CCE116197}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{031A9444-A70E-45AE-AA89-D78CCE116197}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{031A9444-A70E-45AE-AA89-D78CCE116197}.Release|Any CPU.Build.0 = Release|Any CPU
-		{563D6DEC-1FF5-40F8-AAB6-65699BAE1136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{563D6DEC-1FF5-40F8-AAB6-65699BAE1136}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{563D6DEC-1FF5-40F8-AAB6-65699BAE1136}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{563D6DEC-1FF5-40F8-AAB6-65699BAE1136}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A919B475-288F-4FFD-A7DE-4FEFA13444A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A919B475-288F-4FFD-A7DE-4FEFA13444A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A919B475-288F-4FFD-A7DE-4FEFA13444A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A919B475-288F-4FFD-A7DE-4FEFA13444A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06F611C8-7808-447F-9270-69BCAC3DFAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06F611C8-7808-447F-9270-69BCAC3DFAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06F611C8-7808-447F-9270-69BCAC3DFAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06F611C8-7808-447F-9270-69BCAC3DFAB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0B7217D-9391-451E-B52D-49D76581E1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0B7217D-9391-451E-B52D-49D76581E1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0B7217D-9391-451E-B52D-49D76581E1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0B7217D-9391-451E-B52D-49D76581E1EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03590B8C-1E99-4742-BCFD-75CDB33DE45D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26222653-6531-4BDB-8033-D4B910276D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26222653-6531-4BDB-8033-D4B910276D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26222653-6531-4BDB-8033-D4B910276D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26222653-6531-4BDB-8033-D4B910276D45}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F985881D-45F5-4460-BB0D-1600CE638B9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C0B7217D-9391-451E-B52D-49D76581E1EA} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
-		{031A9444-A70E-45AE-AA89-D78CCE116197} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
-		{F985881D-45F5-4460-BB0D-1600CE638B9C} = {6DE3CF8C-7E6C-44F4-BFFC-1D1AC7E80883}
 	EndGlobalSection
 EndGlobal

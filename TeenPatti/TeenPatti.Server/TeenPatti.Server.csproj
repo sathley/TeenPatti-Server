@@ -118,8 +118,8 @@
     <Compile Include="Model\Table.cs" />
     <Compile Include="Model\TableManager.cs" />
     <Compile Include="Model\Variation.cs" />
-    <Compile Include="Services\IPlayer.cs" />
-    <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Services\Service Interfaces\IPlayer.cs" />
+    <Compile Include="Services\Service Impl\PlayerService.cs" />
     <Compile Include="Strategies\AK47\AK47VariationStrategy.cs" />
     <Compile Include="Strategies\Classic\ClassicSameKindStrategies.cs" />
     <Compile Include="Strategies\Classic\ClassicStrategy.cs" />
@@ -149,6 +149,9 @@
       <Project>{589F1C3C-8AF2-49B0-A00D-68EB4EE2246D}</Project>
       <Name>TeenPatti.DataContracts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

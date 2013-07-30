@@ -4,8 +4,8 @@ namespace TeenPatti.Server
 {
     public interface ITableManager
     {
-        List<Table> GetAllTables();
+        List<Game> GetAllTables();
 
-        Table Get(long tableId);
+        Game Get(long tableId);
     }
 }

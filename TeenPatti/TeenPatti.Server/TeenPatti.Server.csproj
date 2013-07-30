@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -95,29 +97,39 @@
   <ItemGroup>
     <Compile Include="Databases\InMemory\InMemoryDB.cs" />
     <Compile Include="Engine\CompareEngine.cs" />
+    <Compile Include="Engine\GameEngine.cs" />
     <Compile Include="Engine\GetTablesHandler.cs" />
     <Compile Include="Engine\MessageHandlerManager.cs" />
+    <Compile Include="Infrastructure\Configuration.cs" />
+    <Compile Include="Infrastructure\MD5.cs" />
+    <Compile Include="Infrastructure\Raindrop.cs" />
+    <Compile Include="Infrastructure\RaindropMIG.cs" />
     <Compile Include="Interfaces\ICompareSameKindClassicStrategy.cs" />
     <Compile Include="Interfaces\IDatabase.cs" />
+    <Compile Include="Interfaces\IIdGenerator.cs" />
     <Compile Include="Interfaces\IMessageHandler.cs" />
     <Compile Include="Interfaces\IMessageSendingManager.cs" />
+    <Compile Include="Interfaces\IPLayerDatabase.cs" />
     <Compile Include="Interfaces\ISessionDatabase.cs" />
     <Compile Include="Interfaces\ITableManager.cs" />
     <Compile Include="Interfaces\IVariationStrategy.cs" />
     <Compile Include="MessageSendingManager.cs" />
     <Compile Include="Model\Card.cs" />
-    <Compile Include="Model\CompareResult.cs" />
+    <Compile Include="Model\enums\CompareResult.cs" />
     <Compile Include="Model\CredentialImpls.cs" />
     <Compile Include="Model\Credentials.cs" />
     <Compile Include="Model\Deck.cs" />
     <Compile Include="Model\Extensions.cs" />
+    <Compile Include="Model\enums\GameState.cs" />
     <Compile Include="Model\Hand.cs" />
-    <Compile Include="Model\HandKind.cs" />
+    <Compile Include="Model\enums\HandKind.cs" />
     <Compile Include="Model\Player.cs" />
-    <Compile Include="Model\Suit.cs" />
-    <Compile Include="Model\Table.cs" />
-    <Compile Include="Model\TableManager.cs" />
+    <Compile Include="Model\enums\Suit.cs" />
+    <Compile Include="Model\Game.cs" />
+    <Compile Include="Model\enums\TableState.cs" />
+    <Compile Include="Model\SeatedPlayer.cs" />
     <Compile Include="Model\Variation.cs" />
+    <Compile Include="Model\enums\VariationType.cs" />
     <Compile Include="Services\Service Interfaces\IPlayer.cs" />
     <Compile Include="Services\Service Impl\PlayerService.cs" />
     <Compile Include="Strategies\AK47\AK47VariationStrategy.cs" />
@@ -150,9 +162,7 @@
       <Name>TeenPatti.DataContracts</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Infrastructure\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -178,6 +188,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

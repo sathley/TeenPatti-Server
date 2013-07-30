@@ -12,11 +12,5 @@ namespace TeenPatti.DataContracts
     {
         [DataMember]
         public Credentials Credentials { get; set; }
-
-        [DataMember]
-        public long ExpiryCount { get; set; }
-
-        [DataMember]
-        public long ExpiryDuration { get; set; }
     }
 }

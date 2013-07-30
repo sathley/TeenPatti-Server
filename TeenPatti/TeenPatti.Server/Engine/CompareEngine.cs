@@ -18,9 +18,9 @@ namespace TeenPatti.Server
                 };
         }
 
-        public static CompareResult Compare(VariationType variation, Hand A, Hand B, Dictionary<string,string> additionalInfo )
+        public static CompareResult Compare(VariationType variation, Hand a, Hand b, Dictionary<string,string> additionalInfo )
         {
-            return Strategies[variation].Compare(A, B, additionalInfo);
+            return Strategies[variation].Compare(a, b, additionalInfo);
         }
 
     }

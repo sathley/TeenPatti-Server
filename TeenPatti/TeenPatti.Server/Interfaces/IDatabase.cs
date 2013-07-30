@@ -1,4 +1,6 @@
-﻿namespace TeenPatti.Server
+﻿using System.Collections.Generic;
+
+namespace TeenPatti.Server
 {
     public interface IDatabase
     {
@@ -9,5 +11,9 @@
         string GetConnection(long playerId);
 
         long GetUser(string connectionId);
+
+        List<Game> GetAllTables();
+
+        Game GetTable(long tableId);
     }
 }

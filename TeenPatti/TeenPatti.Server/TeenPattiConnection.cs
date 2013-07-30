@@ -46,7 +46,7 @@ namespace TeenPatti.Server
             dynamic message = JsonConvert.DeserializeObject(data);
             IMessageHandler handler = MessageHandlerManager.GetHandler(message.Type??"");
             var playerId = _sessionDatabase.Authenticate(message.SessionToken??"");
-
+            
             if(handler != null && playerId != 0)
                 handler.HandleMessage(message.Body, playerId);
             

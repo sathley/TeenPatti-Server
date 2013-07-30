@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace TeenPatti.DataContracts
 {
     [DataContract]
-    public abstract class Result
+    public class Result
     {
-        protected Result()
+        public Result()
         {
             this.Status = new Status();
         }

@@ -15,11 +15,17 @@ namespace TeenPatti.Server
             SetupTables();
 
             RouteTable.Routes.MapConnection("connection", "/teenpatti", typeof(TeenPattiConnection), new ConnectionConfiguration() { EnableCrossDomain = true });
+            RouteTable.Routes.MapHubs(new HubConfiguration()
+                {
+                    EnableCrossDomain = true,
+                    EnableDetailedErrors = true,
+                    EnableJavaScriptProxies = true,
+                });
         }
 
         private static void SetupTables()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         protected void Session_Start(object sender, EventArgs e)

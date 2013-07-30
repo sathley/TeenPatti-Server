@@ -28,11 +28,15 @@ namespace TeenPatti.Server
 
         public override string Authenticate()
         {
-            throw new NotImplementedException();
+            IPlayerDatabase playerDatabase = new InMemoryDB();
+            ISessionDatabase sessionDb = new InMemoryDB();
+            var player = playerDatabase.Get(this.Username, Md5.Hash(this.Password));
+            if (player == null) return null;
+            return sessionDb.CreateSession(player.Id);
         }
     }
 
-
+    
     
     public class FacebookCredentials : Credentials
     {

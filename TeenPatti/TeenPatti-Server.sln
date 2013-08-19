@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.InMemoryDB", "Tee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.StorageAdapter", "TeenPatti.StorageAdapter\TeenPatti.StorageAdapter.csproj", "{1D67CB72-ADD1-4372-8C43-2067D9C70419}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Infrastructure", "TeenPatti.Infrastructure\TeenPatti.Infrastructure.csproj", "{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{1D67CB72-ADD1-4372-8C43-2067D9C70419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D67CB72-ADD1-4372-8C43-2067D9C70419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D67CB72-ADD1-4372-8C43-2067D9C70419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,7 +19,7 @@
 
         public void SetValue(int value)
         {
-            this.Value = value;
+            this.Value = value; 
         }
 
         public override string ToString()

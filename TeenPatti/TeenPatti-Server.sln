@@ -16,9 +16,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.InMemoryDB", "TeenPatti.InMemoryDB\TeenPatti.InMemoryDB.csproj", "{DB2FF572-056F-4285-8B57-F3EDC3D69983}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.StorageAdapter", "TeenPatti.StorageAdapter\TeenPatti.StorageAdapter.csproj", "{1D67CB72-ADD1-4372-8C43-2067D9C70419}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Infrastructure", "TeenPatti.Infrastructure\TeenPatti.Infrastructure.csproj", "{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.AppacitiveDB", "TeenPatti.Appacitive\TeenPatti.AppacitiveDB.csproj", "{5ABC44DC-352B-4359-908B-7765EE17720D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Model", "TeenPatti.Model\TeenPatti.Model.csproj", "{18A08208-A978-4793-B175-847A397ADD08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeenPatti.Translators", "TeenPatti.Translators\TeenPatti.Translators.csproj", "{EA1F588B-C56D-486E-BD31-24F4566D7056}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,20 +42,28 @@ Global
 		{DB2FF572-056F-4285-8B57-F3EDC3D69983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB2FF572-056F-4285-8B57-F3EDC3D69983}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB2FF572-056F-4285-8B57-F3EDC3D69983}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D67CB72-ADD1-4372-8C43-2067D9C70419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D67CB72-ADD1-4372-8C43-2067D9C70419}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D67CB72-ADD1-4372-8C43-2067D9C70419}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D67CB72-ADD1-4372-8C43-2067D9C70419}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ABC44DC-352B-4359-908B-7765EE17720D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABC44DC-352B-4359-908B-7765EE17720D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABC44DC-352B-4359-908B-7765EE17720D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABC44DC-352B-4359-908B-7765EE17720D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A08208-A978-4793-B175-847A397ADD08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A08208-A978-4793-B175-847A397ADD08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A08208-A978-4793-B175-847A397ADD08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A08208-A978-4793-B175-847A397ADD08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1F588B-C56D-486E-BD31-24F4566D7056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1F588B-C56D-486E-BD31-24F4566D7056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1F588B-C56D-486E-BD31-24F4566D7056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1F588B-C56D-486E-BD31-24F4566D7056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DB2FF572-056F-4285-8B57-F3EDC3D69983} = {B39AFDE7-947F-4448-9E94-57A9040544AC}
-		{1D67CB72-ADD1-4372-8C43-2067D9C70419} = {B39AFDE7-947F-4448-9E94-57A9040544AC}
+		{5ABC44DC-352B-4359-908B-7765EE17720D} = {B39AFDE7-947F-4448-9E94-57A9040544AC}
 	EndGlobalSection
 EndGlobal

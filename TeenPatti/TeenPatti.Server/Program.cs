@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using PubNubMessaging.Core;
+using TeenPatti.Model;
 
 namespace TeenPatti.Server
 {
@@ -17,8 +18,15 @@ namespace TeenPatti.Server
 
         public static void Main()
         {
+            var pubnub = new Pubnub(PUBLISH_KEY, SUBSCRIBE_KEY, SECRET_KEY);
+            var tables = new List<Table>()
+                {
+                    new Table(VariationType.Classic, 10, 10, 1000, 3,"table1")
+                };
+            tables.ForEach(t=>t.InitGameplay());
 
-        
+
+
         }
     }
 }

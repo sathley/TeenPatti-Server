@@ -1,16 +1,16 @@
 ﻿using System;
 using TeenPatti.DataContracts;
+using TeenPatti.Infrastructure;
+using TeenPatti.Translators;
 
 namespace TeenPatti.Server
 {
     public class PlayerService : IPlayer
     {
-        public IPlayerDatabase PlayerDatabase { get; set; }
-
         public IIdGenerator IdGenerator { get; set; }
+
         public PlayerService()
         {
-            this.PlayerDatabase = new InMemoryDB();
             this.IdGenerator = new RaindropMIG();
         }
 
@@ -20,7 +20,7 @@ namespace TeenPatti.Server
             player.Id = id;
             var modelPlayer = player.ToDomainModel();
             ValidatePlayer(ref modelPlayer);
-            var result = PlayerDatabase.Create(modelPlayer);
+            var result = TeenPatti.Model.Player.Create(modelPlayer);
             return new PlayerResult()
                 {
                     Player = result.ToDataModel(),
@@ -28,7 +28,7 @@ namespace TeenPatti.Server
                 };
         }
 
-        private static void ValidatePlayer(ref Player modelPlayer)
+        private static void ValidatePlayer(ref TeenPatti.Model.Player modelPlayer)
         {
             modelPlayer.Bank = 10000;
             
@@ -38,7 +38,7 @@ namespace TeenPatti.Server
         {
             return new PlayerResult()
                 {
-                    Player = PlayerDatabase.Get(long.Parse(playerId)).ToDataModel(),
+                    Player = TeenPatti.Model.Player.Get(long.Parse(playerId)).ToDataModel(),
                     Status = new Status(){Code = "200"}
                 };
         }
@@ -50,7 +50,7 @@ namespace TeenPatti.Server
 
         public Result Delete(string playerId)
         {
-            PlayerDatabase.Delete(long.Parse(playerId));
+            Model.Player.Delete(long.Parse(playerId));
             return new Result(){Status = new Status(){Code = "200"}};
         }
 
@@ -71,15 +71,18 @@ namespace TeenPatti.Server
 
         public AuthenticationResult Authenticate(AuthenticateRequest request)
         {
-            var creds = request.Credentials.ToDomainModel() as SecretAnswerCredentials;
-            var token = creds.Authenticate();
-            if (token != null)
+            var creds = request.Credentials.ToDomainModel() as Model.SecretAnswerCredentials;
+            if (creds != null)
             {
-                return new AuthenticationResult()
-                    {
-                        Token = token,
-                        Status = new Status(){Code = "200"}
-                    };
+                var token = creds.Authenticate();
+                if (token != null)
+                {
+                    return new AuthenticationResult()
+                        {
+                            Token = token,
+                            Status = new Status(){Code = "200"}
+                        };
+                }
             }
             return new AuthenticationResult()
                 {

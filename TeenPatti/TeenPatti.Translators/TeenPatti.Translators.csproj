@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}</ProjectGuid>
+    <ProjectGuid>{EA1F588B-C56D-486E-BD31-24F4566D7056}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeenPatti.Infrastructure</RootNamespace>
-    <AssemblyName>TeenPatti.Infrastructure</AssemblyName>
+    <RootNamespace>TeenPatti.Translators</RootNamespace>
+    <AssemblyName>TeenPatti.Translators</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,12 +29,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,15 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration.cs" />
-    <Compile Include="IIdGenerator.cs" />
-    <Compile Include="MD5.cs" />
+    <Compile Include="CredentialTranslator.cs" />
+    <Compile Include="PlayerTranlator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Raindrop.cs" />
-    <Compile Include="RaindropMIG.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\TeenPatti.DataContracts\TeenPatti.DataContracts.csproj">
+      <Project>{589f1c3c-8af2-49b0-a00d-68eb4ee2246d}</Project>
+      <Name>TeenPatti.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeenPatti.Model\TeenPatti.Model.csproj">
+      <Project>{18a08208-a978-4793-b175-847a397add08}</Project>
+      <Name>TeenPatti.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

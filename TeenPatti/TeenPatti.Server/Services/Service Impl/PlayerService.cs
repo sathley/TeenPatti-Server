@@ -1,6 +1,7 @@
 ﻿using System;
 using TeenPatti.DataContracts;
 using TeenPatti.Infrastructure;
+using TeenPatti.Managers;
 using TeenPatti.Translators;
 
 namespace TeenPatti.Server
@@ -9,9 +10,12 @@ namespace TeenPatti.Server
     {
         public IIdGenerator IdGenerator { get; set; }
 
+        public PlayerManager Manager { get; set; }
+
         public PlayerService()
         {
             this.IdGenerator = new RaindropMIG();
+            this.Manager = new PlayerManager();
         }
 
         public PlayerResult Create(DataContracts.Player player)
@@ -20,7 +24,7 @@ namespace TeenPatti.Server
             player.Id = id;
             var modelPlayer = player.ToDomainModel();
             ValidatePlayer(ref modelPlayer);
-            var result = TeenPatti.Model.Player.Create(modelPlayer);
+            var result = Manager.Create(modelPlayer);
             return new PlayerResult()
                 {
                     Player = result.ToDataModel(),
@@ -31,6 +35,10 @@ namespace TeenPatti.Server
         private static void ValidatePlayer(ref TeenPatti.Model.Player modelPlayer)
         {
             modelPlayer.Bank = 10000;
+            if(string.IsNullOrEmpty(modelPlayer.Username))
+                throw new Exception("Username cannot be null or empty");
+            if (string.IsNullOrEmpty(modelPlayer.Password))
+                throw new Exception("Password cannot be null or empty");
             
         }
 
@@ -38,7 +46,7 @@ namespace TeenPatti.Server
         {
             return new PlayerResult()
                 {
-                    Player = TeenPatti.Model.Player.Get(long.Parse(playerId)).ToDataModel(),
+                    Player = Manager.Get(long.Parse(playerId)).ToDataModel(),
                     Status = new Status(){Code = "200"}
                 };
         }
@@ -50,7 +58,7 @@ namespace TeenPatti.Server
 
         public Result Delete(string playerId)
         {
-            Model.Player.Delete(long.Parse(playerId));
+            Manager.Delete(long.Parse(playerId));
             return new Result(){Status = new Status(){Code = "200"}};
         }
 

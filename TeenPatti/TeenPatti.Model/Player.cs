@@ -8,6 +8,7 @@ namespace TeenPatti.Model
         public Player()
         {
             this.Attributes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            //this.Storage = new PlayerStorage();
         }
 
         public long Id { get; set; }
@@ -42,6 +43,8 @@ namespace TeenPatti.Model
 
         public long Bank { get; set; }
 
+        private IPlayerStorage Storage { get; set; }
+
         public string this[string name]
         {
             get
@@ -61,44 +64,44 @@ namespace TeenPatti.Model
             }
         }
 
-        public static Player Create(Player player)
-        {
-            throw new NotImplementedException();
-        }
+        //public static Player Create(Player player)
+        //{
+        //    //IPlayerStorage storage = new PlayerStorage()
+        //}
 
-        public static Player Get(long playerId)
-        {
-            throw new NotImplementedException();
-        }
+        //public static Player Get(long playerId)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public static Player Update(Player player, long playerId)
-        {
-            throw new NotImplementedException();
-        }
+        //public static Player Update(Player player, long playerId)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public static void Delete(long playerId)
-        {
-            throw new NotImplementedException();
-        }
+        //public static void Delete(long playerId)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public bool ValidateSession(string token)
-        {
-            throw new NotImplementedException();
-        }
+        //public bool ValidateSession(string token)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public void InValidateSession(string token)
-        {
-            throw new NotImplementedException();
-        }
+        //public void InValidateSession(string token)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public string GetSecretQuestion(string playerId)
-        {
-            throw new NotImplementedException();
-        }
+        //public string GetSecretQuestion(string playerId)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public string Authenticate(Credentials request)
-        {
-            throw new NotImplementedException();
-        }
+        //public string Authenticate(Credentials request)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

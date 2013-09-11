@@ -8,17 +8,17 @@ namespace TeenPatti.InMemoryDB
 {
     public class InMemoryDb : IConnectionDatabase, ISessionDatabase, IPlayerDatabase, ITableDatabase
     {
-        public static ConcurrentDictionary<string,long> UserSessions=new ConcurrentDictionary<string, long>(); 
+        public static ConcurrentDictionary<string, long> UserSessions = new ConcurrentDictionary<string, long>();
 
-        public static ConcurrentDictionary<long,string> UserConnections=new ConcurrentDictionary<long, string>(); 
+        public static ConcurrentDictionary<long, string> UserConnections = new ConcurrentDictionary<long, string>();
 
-        public static ConcurrentDictionary<long, Table> Tables=new ConcurrentDictionary<long, Table>();
+        public static ConcurrentDictionary<long, Table> Tables = new ConcurrentDictionary<long, Table>();
 
-        public static ConcurrentDictionary<long, Player> Players=new ConcurrentDictionary<long, Player>(); 
+        public static ConcurrentDictionary<long, Player> Players = new ConcurrentDictionary<long, Player>();
 
         public void AddConnection(string connectionId)
         {
-            UserConnections.TryAdd(-1,connectionId);
+            UserConnections.TryAdd(-1, connectionId);
         }
 
         public void RemoveConnection(string connectionId)

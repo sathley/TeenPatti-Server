@@ -81,11 +81,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Pubnub.cs" />
-    <Compile Include="PubnubExample.cs" />
+    <Compile Include="Services\Service Impl\TableService.cs" />
     <Compile Include="Services\Service Interfaces\IPlayer.cs" />
     <Compile Include="Services\Service Impl\PlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Service Interfaces\ITable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -103,6 +103,10 @@
     <ProjectReference Include="..\TeenPatti.Infrastructure\TeenPatti.Infrastructure.csproj">
       <Project>{67CA9F70-5AF9-4CE6-A598-7F6D13E976A2}</Project>
       <Name>TeenPatti.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeenPatti.Manager\TeenPatti.Managers.csproj">
+      <Project>{CE3A6183-545D-4CC2-AA6B-753C0967E1B6}</Project>
+      <Name>TeenPatti.Managers</Name>
     </ProjectReference>
     <ProjectReference Include="..\TeenPatti.Model\TeenPatti.Model.csproj">
       <Project>{18a08208-a978-4793-b175-847a397add08}</Project>

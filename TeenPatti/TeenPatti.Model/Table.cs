@@ -60,21 +60,21 @@ namespace TeenPatti.Model
 
         public bool Sit(long playerId, int position, long bankOnTable)
         {
-            var player = Player.Get(playerId);
+            //var player = Player.Get(playerId);
 
-            if (player == null || player.Bank < MinimumBankRequired)
-                return false;
+            //if (player == null || player.Bank < MinimumBankRequired)
+            //    return false;
 
-            if (SeatedPlayers[position] != null)
-                return false;
+            //if (SeatedPlayers[position] != null)
+            //    return false;
 
-            SeatedPlayers[position] = new SeatedPlayer()
-                {
-                    Player = player,
-                    BankOnTable = 0,
-                    IsActive = false,
-                    IsSeen = false
-                };
+            //SeatedPlayers[position] = new SeatedPlayer()
+            //    {
+            //        Player = player,
+            //        BankOnTable = 0,
+            //        IsActive = false,
+            //        IsSeen = false
+            //    };
             return true;
         }
 

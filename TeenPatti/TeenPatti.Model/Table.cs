@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using PubNubMessaging.Core;
 
 namespace TeenPatti.Model
 {
@@ -16,17 +15,10 @@ namespace TeenPatti.Model
             this.MinimumPlayersRequired = minPlayersRequired;
             this.TableState = TableState.Inactive;
             this.Channel = channel;
-            this.Pubnub = new Pubnub(PublishKey, SubscribeKey, SecretKey);
             this.CurrentStake = boot;
             this.CurrentPlayer = 0;
             this.SeatedPlayers = new SeatedPlayer[capacity];
         }
-
-        const string PublishKey = "pub-c-c5fead49-3cdb-4e24-a1a2-0794f4f4deab";
-        const string SubscribeKey = "sub-c-8104a13e-04c0-11e3-a005-02ee2ddab7fe";
-        const string SecretKey = "sec-c-NzNjNDViZjgtY2RjNS00YzBkLWFkNGItNjZkZmU1ZWU0NTFl";
-
-        Pubnub Pubnub { get; set; }
 
         public long Id { get; set; }
 
@@ -111,16 +103,5 @@ namespace TeenPatti.Model
         {
 
         }
-    }
-
-    public class SeatedPlayer
-    {
-        public Player Player { get; set; }
-
-        public bool IsActive { get; set; }
-
-        public bool IsSeen { get; set; }
-
-        public long BankOnTable { get; set; }
     }
 }

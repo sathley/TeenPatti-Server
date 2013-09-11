@@ -10,7 +10,7 @@ namespace TeenPatti.Server
     {
         public IIdGenerator IdGenerator { get; set; }
 
-        public PlayerManager Manager { get; set; }
+        public IPlayerManager Manager { get; set; }
 
         public PlayerService()
         {
@@ -20,8 +20,6 @@ namespace TeenPatti.Server
 
         public PlayerResult Create(DataContracts.Player player)
         {
-            var id = IdGenerator.GetNextId();
-            player.Id = id;
             var modelPlayer = player.ToDomainModel();
             ValidatePlayer(ref modelPlayer);
             var result = Manager.Create(modelPlayer);

@@ -29,7 +29,7 @@ namespace TeenPatti.Model
             }
         }
 
-        private void Swap(ref Card cardOne, ref Card cardTwo)
+        private static void Swap(ref Card cardOne, ref Card cardTwo)
         {
             var tempSuite = cardOne.Suite;
             var tempValue = cardOne.Value;

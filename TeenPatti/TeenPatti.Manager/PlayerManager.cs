@@ -4,7 +4,7 @@ using TeenPatti.Model;
 
 namespace TeenPatti.Managers
 {
-    public class PlayerManager
+    public class PlayerManager : IPlayerManager
     {
         public PlayerManager()
         {
@@ -15,12 +15,12 @@ namespace TeenPatti.Managers
 
         public Player Create(Player player)
         {
-            return this.Storage.Create(player);
+            return this.Storage.Create(player).Result;
         }
 
         public Player Get(long playerId)
         {
-            throw new NotImplementedException();
+            return this.Storage.Get(playerId).Result;
         }
 
         public Player Update(Player player, long playerId)
@@ -30,7 +30,7 @@ namespace TeenPatti.Managers
 
         public void Delete(long playerId)
         {
-            throw new NotImplementedException();
+            this.Storage.Delete(playerId);
         }
 
         public bool ValidateSession(string token)

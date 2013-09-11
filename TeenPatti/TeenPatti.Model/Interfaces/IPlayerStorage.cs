@@ -1,12 +1,14 @@
-﻿namespace TeenPatti.Model
+﻿using System.Threading.Tasks;
+
+namespace TeenPatti.Model
 {
     public interface IPlayerStorage
     {
-        Player Create(Player player);
+        Task<Player> Create(Player player);
 
-        Player Get(long playerId);
+        Task<Player> Get(long playerId);
 
-        Player Update(Player player, long playerId);
+        Task<Player> Update(Player player, long playerId);
 
         void Delete(long playerId);
     }

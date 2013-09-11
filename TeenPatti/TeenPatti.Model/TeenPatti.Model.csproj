@@ -85,7 +85,7 @@
     <Compile Include="IVariationStrategy.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pubnub.cs" />
+    <Compile Include="SeatedPlayer.cs" />
     <Compile Include="Strategies\AK47\AK47VariationStrategy.cs" />
     <Compile Include="Strategies\Classic\ClassicSameKindStrategies.cs" />
     <Compile Include="Strategies\Classic\ClassicStrategy.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeenPatti.Managers
 {
-    class TableManager
+    public class TableManager
     {
     }
 }
